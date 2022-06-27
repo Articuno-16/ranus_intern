@@ -45,7 +45,7 @@ function run() {
 		temp = [...arrs[arrNames[i]]]
 		while (temp.length > 0) {
 			let first = temp.shift();
-			let curr = Array.prototype.flat ? curr.flat() : flat(res)
+			let curr = Array.prototype.flat ? res.flat() : flat(res)
 			curr.forEach(_ => _.push(first))
 			result.push(JSON.parse(JSON.stringify(curr)))
 			curr.forEach(_ => _.pop())
@@ -57,7 +57,7 @@ function run() {
 	temp = [...A]
 	while (temp.length > 0) {
 		let first = temp.shift();
-		let curr = Array.prototype.flat ? curr.flat() : flat(res)
+		let curr = Array.prototype.flat ? res.flat() : flat(res)
 		curr.forEach(_ => {
 			_.push(first)
 			_.sort()
